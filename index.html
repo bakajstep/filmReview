@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmové hodnocení</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav>
+        <a href="#" id="add-tab" class="active">Přidat film</a>
+        <a href="#" id="list-tab">Seznam filmů</a>
+    </nav>
+
+    <div class="content" id="add-movie">
+        <h2>Přidat film</h2>
+        <div class="form-group">
+            <label for="title">Název filmu</label>
+            <input type="text" id="title" placeholder="Zadejte název filmu">
+        </div>
+        <div class="form-group">
+            <label for="description">Popis filmu</label>
+            <textarea id="description" rows="4" placeholder="Zadejte popis filmu"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rating">Hodnocení</label>
+            <input type="number" id="rating" min="1" max="10" placeholder="Hodnocení 1-10">
+        </div>
+        <button id="save-button">Uložit film</button>
+    </div>
+
+    <div class="content hidden" id="movie-list">
+        <h2>Seznam filmů</h2>
+        <div id="movies-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
